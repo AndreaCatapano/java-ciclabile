@@ -27,10 +27,16 @@ public class IntArray {
     }
 
     public int getNextNumber() {
-        if (indexArray == 0) {
-            return intArray[indexArray];
+        if (hasNextNumber()) {
+            int number = intArray[indexArray];
+            indexArray++;
+            return number;
         }
-        indexArray++;
-        return intArray[indexArray];
+        System.out.println("Non ci sono ulteriori elementi!");
+        return -1;
+    }
+
+    public boolean hasNextNumber() {
+        return indexArray < this.intArray.length;
     }
 }
