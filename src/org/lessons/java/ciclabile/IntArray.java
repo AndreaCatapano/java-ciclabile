@@ -6,6 +6,7 @@ public class IntArray {
     private int indexArray;
 
     IntArray(int[] intArray) {
+        this.indexArray = 0;
         this.intArray = intArray;
     }
 
@@ -23,5 +24,13 @@ public class IntArray {
 
     public void setIntArray(int[] intArray) {
         this.intArray = intArray;
+    }
+
+    public int getNextNumber() {
+        if (indexArray == 0) {
+            return intArray[indexArray];
+        }
+        indexArray++;
+        return intArray[indexArray];
     }
 }
